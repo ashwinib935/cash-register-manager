@@ -20,36 +20,51 @@ var availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 function validateBillAmount() {
     billAmountMessage.style.display = "none";
-    if (Number(billAmount.value) < 0) {
-        billAmountMessage.style.display = "block";
-        billAmountMessage.innerText = "Invalid Bill amount! Amount should be greater than 0";
+    if(billAmount.value){
+        if (Number(billAmount.value) < 0) {
+            billAmountMessage.style.display = "block";
+            billAmountMessage.innerText = "Invalid Bill amount! Amount should be greater than 0";
+        }else{
+            cashGivenLabel.style.display = "block";
+            cashGiven.style.display = "initial";
+            checkButton.style.display = "initial";
+            tableReturnChange.style.display = "table";
+        }
+        
     }
-    cashGivenLabel.style.display = "block";
-    cashGiven.style.display = "initial";
-    checkButton.style.display = "initial";
-    tableReturnChange.style.display = "table";
+   else{
+    billAmountMessage.style.display = "block";
+    billAmountMessage.innerText ="Bill amount should not be empty."
+   }
+ 
 
 }
 
 function validateBillAmountandCashAmount() {
     hideMessage();
-    if (Number(billAmount.value) >= 0) {
-        hideMessage();
-        if (Number(billAmount.value) == Number(cashGiven.value)) {
-            showMessage("No change left! Thanks for the change");
-        } else {
-            if (Number(cashGiven.value) >= Number(billAmount.value)) {
-                var amountTobeReturn = Number(cashGiven.value) - Number(billAmount.value)
-                calculateAmountTobeReturn(amountTobeReturn);
+    if(billAmount.value && cashGiven.value){
+        if (Number(billAmount.value) >= 0 && Number(cashGiven.value) >= 0) {
+            hideMessage();
+            if (Number(billAmount.value) == Number(cashGiven.value)) {
+                showMessage("No change left! Thanks for the change");
             } else {
-                showMessage("Do you waan wash plates? You have given less cash than Bill amount");
+                if (Number(cashGiven.value) >= Number(billAmount.value)) {
+                    var amountTobeReturn = Number(cashGiven.value) - Number(billAmount.value)
+                    calculateAmountTobeReturn(amountTobeReturn);
+                } else {
+                    showMessage("Do you waan wash plates? You have given less cash than Bill amount");
+                }
+    
             }
-
+            checkButton.style.display = "block";
+        } else {
+            showMessage("Invalid Bill Amount or cashGiven ...Bill amount and CashGiven should be greater than 0");
         }
-        checkButton.style.display = "block";
-    } else {
-        showMessage("Invalid Bill Amount");
     }
+    else{
+        showMessage("Bill amount and CashGiven should not be empty.")
+    }
+ 
 
 
 }
