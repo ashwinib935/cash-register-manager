@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>cash register manager</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Cash Register Manager</h1>
+            <p id="discription-of-app">Enter the bill amount and cash given by the customer and know minimum number of
+                notes to return.</p>
+            <label for="bill-amount" id="bill-amount-label">Bill Amount</label>
+            <input id="bill-amount" type="number" />
+            <p id="bill-amount-message"></p>
+            <button id="btn-next">Next</button>
+            <label for="cash-given" id="cash-given-label">Cash Given</label>
+            <input id="cash-given" type="number" />
+
+            <p id="message"></p>
+
+            <button id="btn-check">Check</button>
+            <table class="table-return-change">
+                <caption>Return Change</caption>
+
+                <tr>
+                    <th>No.of Notes</th>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                </tr>
+                <tr>
+                    <th>Notes</th>
+                    <td class="notes">2000</td>
+                    <td class="notes">500</td>
+                    <td class="notes">100</td>
+                    <td class="notes">20</td>
+                    <td class="notes">10</td>
+                    <td class="notes">5</td>
+                    <td class="notes">1</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>

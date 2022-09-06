@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #bbf7d0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.container {
+    margin: 2rem auto;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#discription-of-app {
+    font-size: large;
+}
+
+#bill-amount-label {
+    display: block;
+    font-size: large;
+    font-weight: 600;
+}
+
+#bill-amount {
+    font-size: 14px;
+    outline: #fff;
+    padding: 0.6rem 1rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 258px;
+}
+
+#btn-next {
+    width: 7rem;
+    border: none;
+    color: black;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-size: large;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    background-color: white;
+}
+
+#btn-check {
+
+    border: none;
+    color: black;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-size: large;
+    cursor: pointer;
+    margin: auto;
+    width: 7rem;
+    background-color: white;
+}
+
+#cash-given-label {
+    display: block;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#cash-given {
+    font-size: 14px;
+    outline: #fff;
+    padding: 0.6rem 1rem;
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 258px;
+}
+
+.table-return-change {
+    width: 50%;
+    text-align: justify;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.table-return-change caption {
+    margin: 1rem auto;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.table-return-change table,
+td,
+th {
+    border: 2px solid black;
+    width: 0%;
+    border-collapse: collapse;
+    padding: 0.4rem;
+}
